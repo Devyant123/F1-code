@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Oswald', sans-serif;
+      background-image: url('images/f1.avif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="text-gray-100">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-gray-800 shadow z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="#" class="flex flex-col items-center leading-tight">
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-white">F</span><span class="text-red-600">1</span>
+  </span>
+  <span class="text-2xl font-extrabold italic">
+    <span class="text-red-600">FIT</span><span class="text-white">NESS</span>
+  </span>
+</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="about.html" class="hover:text-red-500">About</a>
+        <a href="program.html" class="hover:text-red-500">Programs</a>
+        <a href="package.html" class="hover:text-red-500">Packages</a>
+        <a href="contacts.html" class="hover:text-red-500">Contact</a>
+      </nav>
+      <button onclick="document.getElementById('enrollModal').classList.remove('hidden')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Join Now</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen bg-black bg-opacity-60 flex items-center justify-center text-white">
+    <div class="p-8 rounded text-center">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Transform Your Body</h2>
+      <p class="text-xl mb-6">Join the best gym in town with certified trainers and top-class equipment.</p>
+      <div class="space-x-4">
+        <button onclick="document.getElementById('enrollModal').classList.remove('hidden')" class="bg-red-600 px-6 py-2 rounded hover:bg-red-700">Get Started</button>
+        <a href="https://www.youtube.com" target="_blank" class="border border-white px-6 py-2 rounded hover:bg-white hover:text-black">Watch Video</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-gray-800">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+      <a href="gallery.html" class="block">
+        <div>
+          <img src="https://img.icons8.com/ios-filled/64/ffffff/dumbbell.png" class="mx-auto"/>
+          <h3 class="text-xl font-bold mt-4">Modern Equipment</h3>
+          <p class="text-sm text-gray-300 mt-2">State-of-the-art machines for all your workout needs.</p>
+        </div>
+      </a>
+      <a href="trainers.html" class="block">
+        <div>
+          <img src="https://img.icons8.com/ios-filled/64/ffffff/personal-trainer.png" class="mx-auto"/>
+          <h3 class="text-xl font-bold mt-4">Expert Trainers</h3>
+          <p class="text-sm text-gray-300 mt-2">Certified professionals to guide you every step.</p>
+        </div>
+      </a>
+      <a href="access.html" class="block">
+        <div>
+          <img src="https://img.icons8.com/ios-filled/64/ffffff/clock--v1.png" class="mx-auto"/>
+          <h3 class="text-xl font-bold mt-4">Easy Access</h3>
+          <p class="text-sm text-gray-300 mt-2">Workout anytime that fits your schedule.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section 
+  <section id="about" class="py-20" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <img src="https://images.unsplash.com/photo-1594737625785-cb04c990ec62" class="rounded-lg shadow-lg" alt="Gym interior">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">About F1 Fitness</h2>
+        <p class="text-gray-300 mb-4">At F1 Fitness, we believe that fitness should be accessible, personalized, and fun. We are a community-driven gym offering a holistic approach to health and wellness. From personal training to group classes, we’ve got something for everyone.</p>
+        <a href="#" class="text-red-400 font-semibold hover:underline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+-->
+  <!-- About Section 
+
+  <section id="about" class="py-20" style="background-color: rgba(0, 0, 0, 0.6);">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div class="relative w-full h-64 md:h-80 overflow-hidden rounded-lg shadow-lg">
+      <div class="absolute inset-0">
+        <div class="w-full h-full swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="im1.jpg" class="w-full h-full object-cover" /></div>
+            <div class="swiper-slide"><img src="im2.jpg" class="w-full h-full object-cover" /></div>
+            <div class="swiper-slide"><img src="im3.jpg" class="w-full h-full object-cover" /></div>
+            <div class="swiper-slide"><img src="im4.jpg" class="w-full h-full object-cover" /></div>
+            <div class="swiper-slide"><img src="im5.jpg" class="w-full h-full object-cover" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-3xl font-bold mb-4">About F1 Fitness</h2>
+      <p class="text-gray-300 mb-4">At F1 Fitness, we believe that fitness should be accessible, personalized, and fun. We are a community-driven gym offering a holistic approach to health and wellness. From personal training to group classes, we’ve got something for everyone.</p>
+      <a href="#" class="text-red-400 font-semibold hover:underline">Learn More</a>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- About Section -->
+<section id="about" class="py-20" style="background-color: rgba(0, 0, 0, 0.6);">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div class="relative w-full h-64 md:h-120 overflow-hidden rounded-lg shadow-lg">
+      <div class="absolute inset-0">
+        <div class="w-full h-full swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/im1.jpg" class="w-full h-full object-cover" /></div>
+            <div class="swiper-slide"><img src="images/im2.jpg" class="w-full h-full object-cover" /></div>
+            <div class="swiper-slide"><img src="images/im3.jpg" class="w-full h-full object-cover" /></div>
+            <div class="swiper-slide"><img src="images/im4.jpg" class="w-full h-full object-cover" /></div>
+            <div class="swiper-slide"><img src="images/im5.jpg" class="w-full h-full object-cover" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-3xl font-bold mb-4">About F1 Fitness</h2>
+      <p class="text-gray-300 mb-4">At F1 Fitness, we believe that fitness should be accessible, personalized, and fun. We are a community-driven gym offering a holistic approach to health and wellness. From personal training to group classes, we’ve got something for everyone.</p>
+      <a href="about.html" class="text-red-400 font-semibold hover:underline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    effect: 'fade',
+  });
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm">&copy; 2019 F1 Fitness. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="https://www.instagram.com/f1_fitnesscr/?hl=en" class="hover:text-red-500">Instagram</a>
+        <a href="https://www.facebook.com/F1FitnessCr/" class="hover:text-red-500">Facebook</a>
+        <a href="#" class="hover:text-red-500">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+<!-- Enrolment Form Modal -->
+<div id="enrollModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    <button onclick="document.getElementById('enrollModal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-500 hover:text-red-600">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">Gym Enrolment Form</h2>
+    <form class="space-y-4" method="POST" action="/submit-enrolment">
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" name="fullname" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" name="email" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Phone Number</label>
+        <input type="tel" name="phone" class="w-full mt-1 p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Preferred Plan</label>
+        <select name="plan" class="w-full mt-1 p-2 border rounded">
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Submit</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
